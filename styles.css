@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#capitulos {
+    list-style: none;
+    padding: 0;
+}
+
+.capitulo-item {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, select {
+    padding: 5px;
+    margin: 5px;
+}

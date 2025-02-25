@@ -18,3 +18,12 @@ function mostrarLibrosLeidos() {
         });
     }
 }
+
+// Ejemplo de uso
+agregarLibro("El principito");
+agregarLibro("1984");
+agregarLibro("Farhenheit 451");
+agregarLibro("Momo");
+agregarLibro("Los Cuatro Acuerdos");
+
+mostrarLibrosLeidos();

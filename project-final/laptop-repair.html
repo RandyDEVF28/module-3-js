@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparación de Laptops</title>
+    <link rel="stylesheet" href="/project-final/laptop-style.css">
+</head>
+<body>
+    <header>
+        <h1>Servicio de Reparación de Laptops</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Sección del video -->
+        <section id="video-section">
+            <h2>Video Informativo</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=8TP5tgfUGhE" frameborder="0" allowfullscreen></iframe>
+        </section>
+        
+        <!-- Sección de comentarios -->
+        <section id="comentarios-container">
+            <h2>Deja tu comentario</h2>
+            <textarea id="comentario-input" placeholder="Escribe tu comentario..."></textarea>
+            <button id="publicar-btn">Publicar</button>
+            <div id="comentarios-lista"></div>
+        </section>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const comentarioInput = document.getElementById("comentario-input");
+            const publicarBtn = document.getElementById("publicar-btn");
+            const comentariosLista = document.getElementById("comentarios-lista");
+            
+            publicarBtn.addEventListener("click", () => {
+                const texto = comentarioInput.value.trim();
+                if (texto === "") return;
+                
+                const comentario = document.createElement("div");
+                comentario.classList.add("comentario");
+                comentario.innerHTML = `
+                    <p>${texto}</p>
+                    <small>${new Date().toLocaleString()}</small>
+                `;
+                
+                comentariosLista.appendChild(comentario);
+                comentarioInput.value = "";
+            });
+        });
+    </script>
+</body>
+</html>

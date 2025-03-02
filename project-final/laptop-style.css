@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top right, #03045E, #0077B6);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos de la caja de comentarios */
+#comentarios-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #00B4D8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.comentario {
+    background: #90E0EF;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    color: #03045E;
+}
+
+.comentario-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #CAF0F8;
+}
+
+.comentario-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    background: #0077B6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005599;
+}
+
+/* Chat flotante */
+#chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    #comentarios-container {
+        width: 90%;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    #chat {
+        width: 90%;
+        right: 5%;
+    }
+}
+

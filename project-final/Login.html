@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="/project-final/login-style.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Ingresar</button>
+            <p id="error-message"></p>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const usuarios = ["usuario1", "usuario2", "usuario3", "usuario4", "usuario5", "usuario6", "usuario7", "usuario8", "usuario9", "usuario10"];
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+            
+            if (usuarios.includes(username) && password === "1234") {
+                window.location.href = "laptop-repair.html";
+            } else {
+                errorMessage.textContent = "Usuario o contraseña incorrectos.";
+                errorMessage.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
